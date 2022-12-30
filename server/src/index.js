@@ -1,8 +1,8 @@
-const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./schema');
-const resolvers = require('./resolvers');
+import { ApolloServer } from 'apollo-server';
+import typeDefs from './schema.js';
+import resolvers from './resolvers.js';
 
-const TrackAPI = require('./datasources/track-api');
+import TrackAPI from './datasources/track-api.js';
 
 const server = new ApolloServer({
   typeDefs,
